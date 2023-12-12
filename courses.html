@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Courses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Course Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cart-item-count" class="badge badge-danger">0</span>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Wallpaper Section -->
+<div class="wallpaper-section">
+    <img src="/images/c3.jpg" class="img-fluid" alt="Wallpaper" style="width: 100%; height: 500px; ;">
+  </div>
+
+<!-- Main Content -->
+<div class="container mt-5">
+  <h1>Available Courses</h1>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/images/java.jpg" class="card-img-top" alt="Course 1 Image">
+        <div class="card-body">
+          <h5 class="card-title">Course 1</h5>
+          <p class="card-text">Description for Course 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="card-text"><small class="text-muted">Instructor: John Doe</small></p>
+          <p class="card-text">&#8377 99.99</p>
+          <a href="#" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 99.99, '/images/java.jpg')">Add to Cart</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/images/python.png" class="card-img-top" alt="Course 2 Image">
+        <div class="card-body">
+          <h5 class="card-title">Course 2</h5>
+          <p class="card-text">Description for Course 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="card-text"><small class="text-muted">Instructor: Jane Smith</small></p>
+          <p class="card-text">&#8377 129.99</p>
+          <a href="#" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 129.99, '/images/python.png')">Add to Cart</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+          <img src="/images/ds.jpeg" class="card-img-top" alt="Course 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Course 3 </h5>
+            <p class="card-text">Description for Course 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="card-text"><small class="text-muted">Instructor: John Doe</small></p>
+            <p class="card-text">&#8377 99.99</p>
+            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 99.99, '/images/ds.jpeg')">Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/images/ai.jpeg" class="card-img-top" alt="Course 2 Image">
+          <div class="card-body">
+            <h5 class="card-title">Course 4</h5>
+            <p class="card-text">Description for Course 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="card-text"><small class="text-muted">Instructor: Jane Smith</small></p>
+            <p class="card-text">&#8377 129.99</p>
+            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 129.99, '/images/ai.jpeg')">Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/images/ml.jpeg" class="card-img-top" alt="Course 1 Image">
+        <div class="card-body">
+          <h5 class="card-title">Course 5</h5>
+          <p class="card-text">Description for Course 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="card-text"><small class="text-muted">Instructor: John Doe</small></p>
+          <p class="card-text">&#8377 99.99</p>
+          <a href="#" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 99.99, '/images/ml.jpeg')">Add to Cart</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/images/data.jpeg" class="card-img-top" alt="Course 2 Image">
+        <div class="card-body">
+          <h5 class="card-title">Course 6</h5>
+          <p class="card-text">Description for Course 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="card-text"><small class="text-muted">Instructor: Jane Smith</small></p>
+          <p class="card-text">&#8377 129.99</p>
+          <a href="#" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 129.99, '/images/data.jpeg')">Add to Cart</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+          <img src="/images/wd.jpeg" class="card-img-top" alt="Course 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Course 7</h5>
+            <p class="card-text">Description for Course 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="card-text"><small class="text-muted">Instructor: John Doe</small></p>
+            <p class="card-text">&#8377 99.99</p>
+            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 99.99, '/images/wd.jpeg')">Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="card">
+          <img src="/images/sql.png" class="card-img-top" alt="Course 2 Image">
+          <div class="card-body">
+            <h5 class="card-title">Course 8</h5>
+            <p class="card-text">Description for Course 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="card-text"><small class="text-muted">Instructor: Jane Smith</small></p>
+            <p class="card-text">&#8377 129.99</p>
+            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-success" onclick="addToCart('Course 1', 129.99, '/images/sql.png')">Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer mt-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Email: maroti.kasbe26@gmail.com</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <h5 class="mr-3 d-inline-block">Follow Us</h5>
+                <!-- social media icons or links here -->
+                <i class="fab fa-facebook mr-3"></i>
+                <i class="fab fa-twitter mr-3"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and other scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Link to external JavaScript file -->
+<script src="./cart.js"></script>
+<script>
+    // Update cart item count on page load
+    window.addEventListener('load', function () {
+      updateCartItemCount();
+    });
+  </script>
+</body>
+</html>
